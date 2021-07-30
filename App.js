@@ -16,7 +16,6 @@ const Home = ({navigation}) => {
         <ScrollView>
         <View style={styles.home}>
         {Data.map((item)=>{
-            v++
             return (
                 <Card
                 press={ () => { navigation.navigate(item.name) }}
@@ -28,7 +27,7 @@ const Home = ({navigation}) => {
         <StatusBar barStyle="light-content"/>
         </View>
         </ScrollView>
-    )
+    );
 }
 
 const VScode = () => {
@@ -92,17 +91,23 @@ const Stack = createStackNavigator();
 export default function App() {
     return (
         <NavigationContainer>
-        <Stack.Navigator >
-            <Stack.Screen
-                name='Home'
-                component={Home}
-                options={{
-                    headerStyle: {
-                        backgroundColor: '#0a84ff',
-                        // color: '#ffffff',
-                    },
-                }}
-            />
+        <Stack.Navigator 
+            screenOptions={{
+                headerStyle: {
+                    backgroundColor: '#0a84ff',
+                },
+                headerTitleStyle: {
+                    fontSize: 25,
+                    color: '#fff',
+                },
+                headerTintColor: '#ddd',
+                headerBackTitleStyle: {
+                    padding: 5,
+                    color: '#fff',
+                },
+            }}
+        >
+            <Stack.Screen name='Home' component={Home}/>
             <Stack.Screen name='VScode' component={VScode} />
             <Stack.Screen name='Sublime' component={Sublime} />
             <Stack.Screen name='Neovim' component={Neovim} />
@@ -117,8 +122,15 @@ export default function App() {
 
 const styles = StyleSheet.create({
     home: {
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
+        paddingHorizontal: 30,
         paddingVertical: 20,
-        height: '100%',
+        backgroundColor: '#222',
+        width: '100%',
+        height: '105%',
     },
     container: {
         height: '100%',

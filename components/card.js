@@ -10,13 +10,8 @@ export default function card(props) {
 	return (
 		<Pressable onPress={press}>
 			<View style={styles.container}>
-				<View style={styles.subcontainer}>
-					<Image
-						source={img}
-					/>
-					<Text style={styles.name}>{name}</Text>
-				</View>
-				<Text style={styles.arrow}>❯</Text>
+				<Image style={styles.img} source={img}/>
+				<Text style={styles.name}>{name}</Text>
 			</View>
 		</Pressable>
 	);
@@ -25,32 +20,26 @@ export default function card(props) {
 const styles = StyleSheet.create ({
 	container: {
 		display: 'flex',
-		flexDirection: 'row',
-		backgroundColor: '#fbfbfb',
-		justifyContent: 'space-between',
+		flexDirection: 'column',
+		backgroundColor: '#353535',
+		justifyContent: 'flex-end',
 		alignItems: 'center',
-		marginHorizontal: 20,
-		marginVertical: 5,
-		paddingHorizontal: 20,
-		height: 90,
+		marginBottom: 20,
+		height: 150,
+		width: 150,
 		borderRadius: 17,
-		shadowColor: '#616161',
-		shadowRadius: 5,
-		shadowOffset: {width:0, height:1},
-		shadowOpacity: 0.35,
 	},
-	subcontainer: {
-		display: 'flex',
-		flexDirection: 'row',
-		alignItems: 'center',
+	img: {
+		margin: 25,
 	},
 	name: {
 		fontSize: 20,
 		fontWeight: '400',
-		paddingHorizontal: 50,
-	},
-	arrow: {
-		paddingHorizontal: 12,
-		fontSize: 18,
-	},
+		padding: 10,
+		color: '#fff',
+		borderRadius: 17,
+		backgroundColor: '#454545',
+		width: '100%',
+		textAlign: 'center',
+	}
 })

@@ -27,8 +27,9 @@ export default function Content(props) {
 const styles = StyleSheet.create ({
 	container: {
 		width: '100%',
-		height: '99%',
-		paddingVertical: 10,
+		height: '100%',
+		paddingVertical: 15,
+		backgroundColor: '#252525',
 	},
 	items: {
 		display: 'flex',
@@ -38,6 +39,7 @@ const styles = StyleSheet.create ({
 	},
 	item: {
 		fontSize: 20,
+		color: '#fff',
 		fontWeight: '400',
 		marginVertical: 9,
 	}
