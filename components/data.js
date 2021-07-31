@@ -89,53 +89,83 @@ const tiles = [
 const finder= [
   {
     key: '1',
-    text1: '',
-    text2: '',
+    text1: 'Cut',
+    text2: '⌘  +  X',
   },
   {
     key: '2',
-    text1: '',
-    text2: '',
+    text1: 'Copy',
+    text2: '⌘  +  C',
   },
   {
     key: '3',
-    text1: '',
-    text2: '',
+    text1: 'Paste',
+    text2: '⌘  +  V',
   },
   {
     key: '4',
-    text1: '',
-    text2: '',
+    text1: 'Undo',
+    text2: '⌘  +  Z',
   },
   {
     key: '5',
-    text1: '',
-    text2: '',
+    text1: 'Redo',
+    text2: '⇧  +  ⌘  +  Z',
   },
   {
     key: '6',
-    text1: '',
-    text2: '',
+    text1: 'Redo',
+    text2: '⇧  +  ⌘  +  Z',
   },
   {
     key: '7',
-    text1: '',
-    text2: '',
+    text1: 'Select All',
+    text2: '⌘  +  A',
   },
   {
     key: '8',
-    text1: '',
-    text2: '',
+    text1: 'Find',
+    text2: '⌘  +  F',
   },
   {
     key: '9',
-    text1: '',
-    text2: '',
+    text1: 'Minimize Window',
+    text2: '⌘  +  M',
   },
   {
     key: '10',
-    text1: '',
-    text2: '',
+    text1: 'New Tab',
+    text2: '⌘  +  T',
+  },
+  {
+    key: '11',
+    text1: 'Close window',
+    text2: '⌘  +  W',
+  },
+  {
+    key: '12',
+    text1: 'Print',
+    text2: '⌘  +  P',
+  },
+  {
+    key: '13',
+    text1: 'Save',
+    text2: '⌘  +  S',
+  },
+  {
+    key: '14',
+    text1: 'Spotlight',
+    text2: '⌘  +  ␣',
+  },
+  {
+    key: '15',
+    text1: 'Quick Look',
+    text2: '␣',
+  },
+  {
+    key: '16',
+    text1: 'Preferences',
+    text2: '⌘  +  ,',
   },
 ]
 
@@ -408,8 +438,47 @@ const safari = [
   },
 ];
 
+const neovim = [
+  {
+    key: '1',
+    text1: 'todo',
+    text2: 'todo'
+  },
+  {
+    key: '2',
+    text1: 'todo',
+    text2: 'todo'
+  },
+  {
+    key: '3',
+    text1: 'todo',
+    text2: 'todo'
+  },
+]
+
+const iterm = [
+  {
+    key: '1',
+    text1: 'todo',
+    text2: 'todo'
+  },
+  {
+    key: '2',
+    text1: 'todo',
+    text2: 'todo'
+  },
+  {
+    key: '3',
+    text1: 'todo',
+    text2: 'todo'
+  },
+]
+
 
 exports.tiles = tiles;
 exports.sublime = sublime;
 exports.vscode = vscode;
 exports.safari = safari;
+exports.finder = finder;
+exports.neovim = neovim;
+exports.iterm = iterm;

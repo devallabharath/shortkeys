@@ -27,6 +27,11 @@ export default [
     },
     {
         key: '6',
+        name: 'Safari',
+        src: require('../assets/safari.png'),
+    },
+    {
+        key: '6',
         name: 'Iterm',
         src: require('../assets/iterm.png'),
     },

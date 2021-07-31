@@ -49,7 +49,7 @@ const Sublime = () => {
 const Neovim = () => {
     return (
         <View style={styles.container}>
-            <Content Data={require('./components/data').nvim}/>
+            <Content Data={require('./components/data').neovim}/>
         </View>
     );
 };
@@ -81,7 +81,7 @@ const Safari = () => {
 const Finder = () => {
     return (
         <View style={styles.container}>
-            <Content Data={require('./components/data').files}/>
+            <Content Data={require('./components/data').finder}/>
         </View>
     );
 };
@@ -109,12 +109,13 @@ export default function App() {
             }}
         >
             <Stack.Screen name='Home' component={Home}/>
+            <Stack.Screen name='Tiles' component={Tiles} />
+            <Stack.Screen name='Finder' component={Finder} />
             <Stack.Screen name='VScode' component={VScode} />
             <Stack.Screen name='Sublime' component={Sublime} />
             <Stack.Screen name='Neovim' component={Neovim} />
-            <Stack.Screen name='Tiles' component={Tiles} />
+            <Stack.Screen name='Safari' component={Safari} />
             <Stack.Screen name='Iterm' component={Iterm} />
-            <Stack.Screen name='Finder' component={Finder} />
         </Stack.Navigator>
         </NavigationContainer>
     )
@@ -122,15 +123,16 @@ export default function App() {
 
 const styles = StyleSheet.create({
     homeback: {
-        backgroundColor: '#222'
+        backgroundColor: '#222',
+        paddingVertical: 20,
+        paddingHorizontal: 13,
     },
     home: {
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         backgroundColor: '#222',
-        marginVertical: 30,
         width: '100%',
         height: '100%',
     },
