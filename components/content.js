@@ -1,9 +1,7 @@
 import React from 'react';
-import Shortcut from './shortcut'
 import {
 	StyleSheet,View,Text,
-	FlatList,SectionList,
-	ScrollView,Dimensions} from 'react-native';
+	FlatList} from 'react-native';
 
 
 export default function Content(props) {

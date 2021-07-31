@@ -13,7 +13,7 @@ import {
 
 const Home = ({navigation}) => {
     return (
-        <ScrollView>
+        <ScrollView style={styles.homeback}>
         <View style={styles.home}>
         {Data.map((item)=>{
             return (
@@ -101,6 +101,7 @@ export default function App() {
                     color: '#fff',
                 },
                 headerTintColor: '#ddd',
+                headerStatusBarHeight: 55,
                 headerBackTitleStyle: {
                     padding: 5,
                     color: '#fff',
@@ -113,7 +114,6 @@ export default function App() {
             <Stack.Screen name='Neovim' component={Neovim} />
             <Stack.Screen name='Tiles' component={Tiles} />
             <Stack.Screen name='Iterm' component={Iterm} />
-            <Stack.Screen name='Safari' component={Safari} />
             <Stack.Screen name='Finder' component={Finder} />
         </Stack.Navigator>
         </NavigationContainer>
@@ -121,16 +121,18 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+    homeback: {
+        backgroundColor: '#222'
+    },
     home: {
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        justifyContent: 'space-between',
-        paddingHorizontal: 30,
-        paddingVertical: 20,
+        justifyContent: 'space-around',
         backgroundColor: '#222',
+        marginVertical: 30,
         width: '100%',
-        height: '105%',
+        height: '100%',
     },
     container: {
         height: '100%',
