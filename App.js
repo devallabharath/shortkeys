@@ -3,12 +3,9 @@ import Card from './components/card';
 import Content from './components/content';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import Data from './components/homedata';
-import {
-    StyleSheet,StatusBar,
-    View, ScrollView,
-} from 'react-native';
+import { StyleSheet,StatusBar,View,ScrollView } from 'react-native';
 
 
 const Home = ({navigation}) => {

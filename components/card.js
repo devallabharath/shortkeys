@@ -8,37 +8,44 @@ import {
 export default function card(props) {
 	const {img, name, press} = props
 	return (
+		<View style={styles.card}>
 		<Pressable onPress={press}>
-			<View style={styles.container}>
-				<Image style={styles.img} source={img}/>
-				<Text style={styles.name}>{name}</Text>
+			<View style={styles.imgback}>
+				<Image source={img}/>
+			</View>
+			<View style={styles.textback}>
+				<Text style={styles.text}>{name}</Text>
 			</View>
 		</Pressable>
+		</View>
 	);
 }
 
 const styles = StyleSheet.create ({
-	container: {
+	card: {
+		display: 'flex',
+		flexDirection: 'column',
+		width: 175,
+		marginBottom: 20,
+	},
+	imgback: {
 		display: 'flex',
 		flexDirection: 'column',
 		backgroundColor: '#353535',
-		justifyContent: 'space-between',
 		alignItems: 'center',
-		marginBottom: 20,
-		height: 140,
-		width: 175,
-		borderRadius: 10,
+		paddingVertical: 30,
+		borderTopLeftRadius: 10,
+		borderTopRightRadius: 10,
 	},
-	img: {
-		margin: 30,
+	textback: {
+		backgroundColor: '#454545',
+		borderBottomLeftRadius: 10,
+		borderBottomRightRadius: 10,
 	},
-	name: {
+	text: {
 		fontSize: 20,
 		fontWeight: '400',
 		color: '#fff',
-		backgroundColor: '#454545',
-		width: '100%',
-		height: '25%',
 		textAlign: 'center',
 		paddingVertical: 6,
 	}
